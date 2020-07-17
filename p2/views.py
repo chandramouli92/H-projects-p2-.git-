@@ -1,5 +1,9 @@
-from django.http import HttpResponce
+from django.http import HttpResponse
+from django.shortcuts import render
+
 def index(request):
-    return HttpResponce("hello world")
+    return HttpResponse("hello world")
 def home(request):
-    return HttpResponce("<h1>welcome to home page</h1>")
+    return HttpResponse("<h1>welcome to home page</h1>")
+def html_demo(request):
+    return render(request,"sample1.html")
